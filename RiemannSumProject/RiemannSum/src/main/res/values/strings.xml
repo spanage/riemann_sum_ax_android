@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Riemann Sum</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="functions_label">Select function:</string>
+    
+    <string name="function_x_squared">x^2</string>
+    <string name="function_x_cubed">x^3</string>
+    <string name="function_sine_x">sin(x)</string>
+
+    <string name="controls_x_min">Min X</string>
+    <string name="controls_x_max">Max X</string>
+    <string name="controls_n_intervals">Number of Intervals: </string>
+    <string name="controls_submit">Go!</string>
+
+    <string name="controls_invalid_input">Invalid input</string>
+
+</resources>

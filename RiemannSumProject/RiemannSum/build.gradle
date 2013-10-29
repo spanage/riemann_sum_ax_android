@@ -1,0 +1,44 @@
+buildscript {
+    repositories {
+        mavenCentral()
+
+        maven {
+            url 'https://oss.sonatype.org/content/repositories/snapshots/'
+        }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:0.7+'
+        classpath 'com.squareup.gradle:gradle-android-test-plugin:0.9.1-SNAPSHOT'
+    }
+}
+
+apply plugin: 'android'
+apply plugin: 'android-test'
+
+repositories {
+    mavenCentral()
+}
+
+android {
+    compileSdkVersion 18
+    buildToolsVersion "18.0.1"
+
+    defaultConfig {
+        minSdkVersion 17
+        targetSdkVersion 18
+    }
+
+    sourceSets {
+        instrumentTest {
+            java.srcDir file('src/test/java')
+        }
+    }
+}
+
+dependencies {
+    repositories {
+        mavenCentral()
+    }
+    compile "com.android.support:support-v4:18.0.+"
+    testCompile 'junit:junit:4.11'
+}
