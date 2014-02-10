@@ -21,4 +21,9 @@ public class CubeFunction extends Function{
     public int getNameResourceId() {
         return R.string.function_x_cubed;
     }
+
+    @Override
+    public int getPhoneticNameResourceId() {
+        return R.string.function_x_cubed_phonetic;
+    }
 }

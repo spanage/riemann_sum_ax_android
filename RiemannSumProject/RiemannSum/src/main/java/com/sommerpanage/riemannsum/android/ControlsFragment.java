@@ -73,9 +73,11 @@ public class ControlsFragment extends Fragment {
                 public void onClick(View v) {
                     final Double min = parseDoubleFromTextView(mMinText);
                     final Double max = parseDoubleFromTextView(mMaxText);
-                    final Function function = mFunctions.get(mFunctionRadios.getCheckedRadioButtonId());
+                    final int functionID = mFunctionRadios.getCheckedRadioButtonId();
                     final int intervals = mIncrementer.getProgress();
-                    if (min != null && max != null && function != null) {
+                    if (min != null && max != null && functionID > 0) {
+                        final Function function = mFunctions.get(functionID);
+                        dismissKeyboardFromView(v);
                         mOnControlsUpdatedListener.onControlsUpdate(function, min, max, intervals);
                     } else {
                         Toast toast = Toast.makeText(getActivity(), getString(R.string.controls_invalid_input), Toast.LENGTH_SHORT);
@@ -126,6 +128,7 @@ public class ControlsFragment extends Fragment {
         for (Function f : mFunctions) {
             RadioButton button = new RadioButton(this.getActivity());
             button.setText(getString(f.getNameResourceId()));
+            button.setContentDescription(getString(f.getPhoneticNameResourceId()));
             button.setId(mFunctions.indexOf(f));
             radioGroup.addView(button);
         }
@@ -136,12 +139,18 @@ public class ControlsFragment extends Fragment {
         SeekBar seekBar = (SeekBar) getView().findViewById(R.id.interval_count_seekbar);
         seekBar.setKeyProgressIncrement(1);
         setIncrementValue(seekBar.getProgress());
+        final String longFormat = getString(R.string.controls_ax_seekbar_long_format);
+        final int increment = Math.max(1, Math.round((float) seekBar.getMax() / 5));
+        seekBar.setContentDescription(String.format(longFormat, seekBar.getProgress(), increment, increment));
 
         seekBar.setOnSeekBarChangeListener(
                 new SeekBar.OnSeekBarChangeListener() {
+
                     @Override
                     public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                         setIncrementValue(progress);
+                        final String shortFormat = getString(R.string.controls_ax_seekbar_short_format);
+                        seekBar.setContentDescription(String.format(shortFormat, progress));
                     }
 
                     @Override

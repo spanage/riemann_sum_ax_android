@@ -8,4 +8,6 @@ package com.sommerpanage.riemannsum.model;
     public abstract double evaluate(double x);
     public abstract double evaluateIntegral(double x1, double x2);
     public abstract int getNameResourceId();
+    public abstract int getPhoneticNameResourceId();
+
 }

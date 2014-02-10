@@ -21,4 +21,10 @@ public class SquareFunction extends Function {
     public int getNameResourceId() {
         return R.string.function_x_squared;
     }
+
+    @Override
+    public int getPhoneticNameResourceId() {
+        return R.string.function_x_squared_phonetic;
+    }
+
 }

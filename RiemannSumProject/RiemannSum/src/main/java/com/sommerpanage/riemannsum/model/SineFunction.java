@@ -21,4 +21,10 @@ public class SineFunction extends Function {
     public int getNameResourceId() {
         return R.string.function_sine_x;
     }
+
+    @Override
+    public int getPhoneticNameResourceId() {
+        return R.string.function_sine_x_phonetic;
+    }
+
 }

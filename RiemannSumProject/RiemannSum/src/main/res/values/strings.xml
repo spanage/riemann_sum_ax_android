@@ -10,11 +10,25 @@
     <string name="function_x_cubed">x^3</string>
     <string name="function_sine_x">sin(x)</string>
 
+    <string name="function_x_squared_phonetic">x squared</string>
+    <string name="function_x_cubed_phonetic">x cubed</string>
+    <string name="function_sine_x_phonetic">sine x</string>
+
     <string name="controls_x_min">Min X</string>
     <string name="controls_x_max">Max X</string>
     <string name="controls_n_intervals">Number of Intervals: </string>
     <string name="controls_submit">Go!</string>
-
+    <string name="controls_ax_submit">Go! Draw graph.</string>
     <string name="controls_invalid_input">Invalid input</string>
+    <string name="controls_ax_seekbar_short_format">Slider: %d intervals.</string>
+    <string name="controls_ax_seekbar_long_format">Slider: %1$d intervals.
+        Tap and hold, then slide finger to change value.
+        Swipe right, then left to increment by %2$d.
+        Swipe left then right to decrement by %3$d. </string>
+
+
+    <string name="graph_x_axis_disc_format">X-axis. From %1$.02f to %2$.02f.</string>
+    <string name="graph_y_axis_disc_format">Y-axis. From %1$.02f to %2$.02f.</string>
+    <string name="graph_rect_disc_format">Rect %1$d. From %2$.02f to %3$.02f. Area %4$.02f.</string>
 
 </resources>

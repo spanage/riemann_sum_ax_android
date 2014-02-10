@@ -22,7 +22,7 @@ public class GraphFragment extends Fragment {
     private TextView mActualResultTextView, mRiemannResultTextView;
 
     public GraphFragment(RiemannModel model) {
-        this.mModel = model;
+        mModel = model;
     }
 
     public void update() {
