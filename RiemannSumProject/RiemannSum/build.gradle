@@ -7,7 +7,7 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:0.7+'
+        classpath 'com.android.tools.build:gradle:0.9+'
         classpath 'com.squareup.gradle:gradle-android-test-plugin:0.9.1-SNAPSHOT'
     }
 }
@@ -21,11 +21,13 @@ repositories {
 
 android {
     compileSdkVersion 18
-    buildToolsVersion "18.0.1"
+    buildToolsVersion "19.0.3"
 
-    defaultConfig {
-        minSdkVersion 17
-        targetSdkVersion 18
+    buildTypes {
+        defaultConfig {
+            minSdkVersion 17
+            targetSdkVersion 18
+        }
     }
 
     sourceSets {
