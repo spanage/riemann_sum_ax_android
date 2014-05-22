@@ -9,9 +9,10 @@
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:layout_centerHorizontal="true"
-            android:text="@string/functions_label"/>
+            android:text="@string/functions_label"
+            android:labelFor="@+id/function_radios"/>
     <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
-                android:id="@+id/function_radios"
+                android:id="@id/function_radios"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"

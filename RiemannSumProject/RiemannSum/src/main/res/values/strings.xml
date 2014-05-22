@@ -20,8 +20,8 @@
     <string name="controls_submit">Go!</string>
     <string name="controls_ax_submit">Go! Draw graph.</string>
     <string name="controls_invalid_input">Invalid input</string>
-    <string name="controls_ax_seekbar_short_format">Slider: %d intervals.</string>
-    <string name="controls_ax_seekbar_long_format">Slider: %1$d intervals.
+    <string name="controls_ax_seekbar_short_format">%d intervals.</string>
+    <string name="controls_ax_seekbar_long_format">%1$d intervals.
         Tap and hold, then slide finger to change value.
         Swipe right, then left to increment by %2$d.
         Swipe left then right to decrement by %3$d. </string>
