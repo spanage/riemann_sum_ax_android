@@ -102,7 +102,7 @@ public class GraphView extends View{
         mVirtualViews.add(axisStartIndex, new AxisVirtualView(false, (int)mOriginX, (int)screenY_xAxis, (int)mWidth,
                 (float)mModelXMin, (float)mModelXMax, VIRTUAL_AXIS_SPAN, getContext()));
         mVirtualViews.add(++axisStartIndex, new AxisVirtualView(true, (int)screenX_yAxis, (int)mOriginY, (int)mWidth,
-                (float)mModelXMin, (float)mModelXMax, VIRTUAL_AXIS_SPAN, getContext()));
+                (float)mModelYMin, (float)mModelYMax, VIRTUAL_AXIS_SPAN, getContext()));
 
         final String xMinString = String.format("%.02f", mModelXMin);
         final String xMaxString = String.format("%.02f", mModelXMax);
