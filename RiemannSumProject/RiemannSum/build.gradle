@@ -7,26 +7,25 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:0.9+'
+        classpath 'com.android.tools.build:gradle:0.12.+'
         classpath 'com.squareup.gradle:gradle-android-test-plugin:0.9.1-SNAPSHOT'
     }
 }
 
 apply plugin: 'android'
-apply plugin: 'android-test'
 
 repositories {
     mavenCentral()
 }
 
 android {
-    compileSdkVersion 18
-    buildToolsVersion "19.0.3"
+    compileSdkVersion 19
+    buildToolsVersion "19.1.0"
 
     buildTypes {
         defaultConfig {
             minSdkVersion 17
-            targetSdkVersion 18
+            targetSdkVersion 19
         }
     }
 
@@ -41,6 +40,5 @@ dependencies {
     repositories {
         mavenCentral()
     }
-    compile "com.android.support:support-v4:18.0.+"
-    testCompile 'junit:junit:4.11'
+    compile "com.android.support:support-v4:19.0.+"
 }
